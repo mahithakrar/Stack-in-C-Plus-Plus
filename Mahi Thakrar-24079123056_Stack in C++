@@ -1,0 +1,74 @@
+//NAME:MAHI THAKRAR
+//PRN:24070123056
+//ENTC A3
+//EXPERIMENT-19
+
+#include <iostream>
+#define MAXSIZE 5
+
+class Stack{
+    private:
+    int arr[MAXSIZE];
+    int top;
+
+    public:
+    Stack():top(-1){}
+    void push(int data){
+        if(top< MAXSIZE-1){
+            top++;
+            arr[top] = data;
+    }
+    else{
+        std::cout<< "Stack Overflow\n";
+    }
+}
+
+    void pop(){
+        if(top> -1){
+        top--;
+    }
+    else{
+        std::cout<< "Stack Underflow\n";
+    }
+}
+
+    void display(){
+        for(int i=0; i<=top; i++){
+            std::cout<< arr[i]<< " ";
+        }
+        std::cout<<std::endl;
+    }
+};
+
+int main() {
+    Stack s1;
+    int a, b, result;
+
+    // Push 1 and 2
+    s1.push(1);
+    s1.push(2);
+
+    // Pop 2 and 1, add them
+    s1.pop(); // removes 2
+    s1.pop(); // removes 1
+    result = 1 + 2;
+    s1.push(result); // push sum (3)
+
+    // Push 3
+    s1.push(3);
+
+    // Pop 3 and sum, multiply
+    s1.pop(); // removes 3
+    s1.pop(); // removes 3 (sum)
+    result = (1 + 2) * 3;
+    s1.push(result); // push product (9)
+
+    // Display final result
+    s1.display(); // Should print 9
+
+    return 0;
+}
+
+
+//Output:
+//9 
