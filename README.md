@@ -6,7 +6,7 @@ Tools Used: VS Code or Programiz online compiler.
 
 # Theory
 
-# Stack in Cpp
+# Stack in C++
 
 A **stack** in C++ is a linear data structure that works on the **Last In, First Out (LIFO)** principle. It allows operations like **push()** to add elements, **pop()** to remove elements, and **top()** to access the last inserted element. Stacks can be implemented using **arrays**, **linked lists**, or the **STL stack container**. They are commonly used in **recursion, expression evaluation, and function call management**.
 
